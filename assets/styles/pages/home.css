@@ -1,0 +1,370 @@
+/* Most searched */
+.display_none {
+    display: none !important;
+}
+
+.display_block {
+    display: block !important;
+}
+
+#most_searched {
+    margin-top: 80px;
+}
+
+.most_searched__title {
+    font-size: 2.8rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.most_searched__title > span:nth-child(2) {
+    color: #4AD4E7;
+}
+
+.most_searched__list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding-left: unset;
+}
+
+.most_searched__item {
+    /* background-color: red; */
+}
+
+.most_searched__item__up {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(-45deg, #105192, #2473AF);
+    border-radius: 24px;
+    position: relative;
+    box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 8px 8px 24px 8px;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.most_searched__item__up__overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--light-color);
+    padding: 20px;
+    z-index: 2;
+    overflow-y: overlay;
+    cursor: pointer;
+    display: none;
+}
+
+.most_searched__item__up__overlay > section {
+    margin-bottom: 12px;    
+}
+
+.most_searched__item__up__overlay > section > img {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    object-fit: cover;
+    margin-right: 12px;
+}
+
+.most_searched__item__up__overlay > section > span {
+    color: var(--dark-color);
+}
+
+.most_searched__item__up__overlay.appear {
+    animation: appear_to_top 0.4s ease-in-out forwards;
+}
+
+.most_searched__item__up__overlay.hide {
+    animation: hide_to_bottom 0.4s ease-in-out forwards;
+}
+
+@keyframes appear_to_top {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes hide_to_bottom {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+.most_searched__item__up::after {
+    background: linear-gradient(to right,rgba(255,255,255,0.3),rgba(255, 255, 255, 0.5),rgba(255,255,255,0.3));
+    content: "";
+    height: 200%;
+    left: -40%;
+    opacity: 1;
+    position: absolute;
+    top: -100%;
+    transform: rotate(45deg);
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    width: 60px;
+    z-index: 1;
+    animation-name: mirror;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes mirror {
+    to {
+        left: 200%;
+        top: 80%;
+    }
+}
+
+.most_searched__item__up__info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.most_searched__item__up__info ~ h1 {
+    width: 100%;
+    text-align: center;
+}
+
+.most_searched__item__up__info ~ h1 > img {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.most_searched__item__up__info > section:first-child {
+    width: 50%;
+    height: auto;
+}
+ 
+.most_searched__item__up__info > section:first-child > img {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+    scale: 1.2;
+    transform: translateX(6px);
+}
+
+.most_searched__item__up__info > section:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-top: 18px;
+}
+
+.most_searched__item__up__info > section > figure {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.most_searched__item__up__info > section:nth-child(2) > figure > div > img {
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+    object-fit: cover;
+    margin-bottom: 6px;
+}
+
+.most_searched__item__down {
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    color: var(--light-color);
+    padding: 4px 8px; 
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 12px;
+    height: 40px;
+    box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.1);
+}
+
+.most_searched__item__down:hover {
+    opacity: 0.8;
+}
+
+.most_searched__item__down:active {
+    background-color: rgb(255, 59, 59);
+}
+/* Most reviews */
+
+#most_review {
+    margin-top: 80px;
+}
+
+.most_review__title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.most_review__title > h1 {
+    font-size: 2.8rem;
+    width: 100%;
+    text-align: start;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+.most_review__title > select {
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 4px 8px;
+    box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.most_review__title > h1 > span:last-child {
+    color: #4AD4E7;
+}
+
+.most_review__list {
+    list-style: none;
+    padding-left: unset;
+    padding: 20px 52px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    border: 1px solid var(--primary-color);
+}
+
+.most_review__item + .most_review__item {
+    margin-top: 24px;
+}
+
+.most_review__item__up {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.most_review__item__up > div:first-child {
+    text-align: center;
+}
+
+.most_review__item__up > div:first-child > img {
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.most_review__item__up > div:nth-child(2), .most_review__item__up > div:nth-child(3) {
+    text-align: center;
+}
+
+.most_review__item__up > div:nth-child(2) > img, .most_review__item__up > div:nth-child(3) > img {
+    width: 100px;
+    height: 50px;
+    background-color: var(--primary-color);
+    border-radius: 12px;
+    box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.most_review__item__up > div:last-child {
+    width: 70px;
+    height: 70px;
+    transform: translateY(-18px);
+}
+
+.most_review__item__up > div:last-child > img {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.most_review__item__down {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.most_review__item__down > div {
+    width: 100%;
+    height: 10px;
+    background-color: var(--light-color);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.most_review__item__down > div::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 6px;
+}
+
+.most_review__item:nth-child(1) .most_review__item__down > div::after {
+    width: 90%;
+    
+}
+.most_review__item:nth-child(2) .most_review__item__down > div::after {
+    width: 70%;
+}
+.most_review__item:nth-child(3) .most_review__item__down > div::after {
+    width: 60%;
+}
+.most_review__item:nth-child(4) .most_review__item__down > div::after {
+    width: 50%;
+}
+.most_review__item:nth-child(5) .most_review__item__down > div::after {
+    width: 40%;
+}
+
+.most_review__item:nth-of-type(4n) .most_review__item__down > div::after {
+    background-image: linear-gradient(to right, #C51BBE, #c51bbf89);
+}
+
+.most_review__item:nth-of-type(4n - 3) .most_review__item__down > div::after {
+    background-image: linear-gradient(to right, #C5621B, #c5621b94);
+}
+
+.most_review__item:nth-of-type(4n - 2) .most_review__item__down > div::after {
+    background-image: linear-gradient(to right, #1BC588, #1bc58781);
+}
+
+.most_review__item:nth-of-type(4n - 1) .most_review__item__down > div::after {
+    background-image: linear-gradient(to right, #C2C51B, #c2c51b99);
+}
+
+.most_review__item__down > span {
+    font-weight: 400;
+    margin-bottom: 6px;
+}
