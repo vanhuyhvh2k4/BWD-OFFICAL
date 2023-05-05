@@ -79,7 +79,7 @@ body {
 .app {
     width: 100%;
     height: fit-content;
-    background-image: linear-gradient(to bottom, #00062A, #0065DD);
+    background-image: linear-gradient(to bottom, #00062A, #0065dd);
     background-repeat: no-repeat;
 }
 
@@ -105,4 +105,25 @@ body {
     height: 15px;
     flex-shrink: 0;
     object-fit: cover;
+}
+
+.see_more, .details, .compare, .laptop_screen {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.btn_close:active {
+    zoom: 0.8;
+}
+
+.close {
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+    object-fit: cover;
+    margin-left: auto;
+    cursor: pointer;
+    margin-bottom: 12px;
 }
