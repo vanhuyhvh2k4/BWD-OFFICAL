@@ -35,6 +35,18 @@ const laptoplist = [
         price: '500$',
         imgUrl: 'laptop6',
     },
+    {
+        company: 'Apple',
+        name: 'Macbook Pro',
+        price: '500$',
+        imgUrl: 'laptop7',
+    },
+    {
+        company: 'Apple',
+        name: 'Macbook Pro',
+        price: '500$',
+        imgUrl: 'laptop8',
+    },
 ]
 
 export default laptoplist

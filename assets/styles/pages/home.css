@@ -225,7 +225,6 @@
     height: 100%;
     flex-shrink: 0;
     object-fit: cover;
-    scale: 1.2;
     transform: translateX(6px);
 }
 
@@ -312,122 +311,90 @@
 .most_review__list {
     list-style: none;
     padding-left: unset;
-    padding: 20px 52px;
+    /* padding: 20px 52px;
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 30px;
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--primary-color); */ 
 }
 
-.most_review__item + .most_review__item {
-    margin-top: 24px;
+.most_review__item:nth-of-type(5n) .most_review__item__img {
+    background-image: linear-gradient(45deg, rgba(136, 0, 255, 0.471), rgb(0, 94, 255));
+}
+.most_review__item:nth-of-type(5n - 1) .most_review__item__img {
+    background-image: linear-gradient(45deg, rgba(0, 174, 255, 0.471), rgb(61, 252, 176));
+}
+.most_review__item:nth-of-type(5n - 2) .most_review__item__img {
+    background-image: linear-gradient(45deg, rgba(44, 220, 255, 0.826), rgba(255, 145, 0, 0.836));
+}
+.most_review__item:nth-of-type(5n - 3) .most_review__item__img {
+    background-image: linear-gradient(45deg, rgba(255, 0, 0, 0.471), rgb(0, 94, 255));
+}
+.most_review__item:nth-of-type(5n - 4) .most_review__item__img {
+    background-image: linear-gradient(45deg, rgb(238, 140, 140), rgb(154, 255, 86));
 }
 
-.most_review__item__up {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.most_review__item__up > div:first-child {
-    text-align: center;
-}
-
-.most_review__item__up > div:first-child > img {
-    width: 150px;
-    height: 150px;
-    flex-shrink: 0;
-    object-fit: contain;
-    zoom: 1.5;
-}
-
-.most_review__item__up > div:nth-child(2), .most_review__item__up > div:nth-child(3) {
-    text-align: center;
-}
-
-.most_review__item__up > div:nth-child(2) > img, .most_review__item__up > div:nth-child(3) > img {
-    width: 100px;
-    height: 50px;
-    background-color: var(--primary-color);
+.most_review__item_inner {
+    background-color: white;
+    height: 400px;
     border-radius: 12px;
-    box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.1);
-    flex-shrink: 0;
-    object-fit: contain;
-    margin-bottom: 12px;
-    cursor: pointer;
+    box-shadow: 2px 2px 20px 1px rgba(0, 0 , 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 24px;
 }
 
-.most_review__item__up > div:last-child {
-    width: 70px;
-    height: 70px;
-    transform: translateY(-18px);
+.most_review__item__img {
+    width: 100%;
+    height: 50%;
+    border-bottom: 1px solid #ccc;
 }
 
-.most_review__item__up > div:last-child > img {
+.most_review__item__img > img {
     width: 100%;
     height: 100%;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.most_review__item__text {
+    color: var(--dark-color);
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.most_review__item__text > section > img {
+    width: 30px;
+    height: 30px;
     flex-shrink: 0;
     object-fit: cover;
 }
 
-.most_review__item__down {
-    width: 100%;
+.most_review__item__btn {
     display: flex;
-    flex-direction: column;
-    align-items: end;
+    justify-content: space-between;
+    padding: 8px;
 }
 
-.most_review__item__down > div {
-    width: 100%;
-    height: 10px;
+.most_review__item__btn > button {
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    padding: 8px;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    height: 50px;
+}
+
+.most_review__item__btn > button:last-child {
+    background-color: rgb(255, 65, 65);
+}
+
+.most_review__item__btn > button > img {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    object-fit: cover;
     background-color: var(--light-color);
-    border-radius: 6px;
-    overflow: hidden;
-    position: relative;
-}
-
-.most_review__item__down > div::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    border-radius: 6px;
-}
-
-.most_review__item:nth-child(1) .most_review__item__down > div::after {
-    width: 90%;
-    
-}
-.most_review__item:nth-child(2) .most_review__item__down > div::after {
-    width: 70%;
-}
-.most_review__item:nth-child(3) .most_review__item__down > div::after {
-    width: 60%;
-}
-.most_review__item:nth-child(4) .most_review__item__down > div::after {
-    width: 50%;
-}
-.most_review__item:nth-child(5) .most_review__item__down > div::after {
-    width: 40%;
-}
-
-.most_review__item:nth-of-type(4n) .most_review__item__down > div::after {
-    background-image: linear-gradient(to right, #C51BBE, #c51bbf89);
-}
-
-.most_review__item:nth-of-type(4n - 3) .most_review__item__down > div::after {
-    background-image: linear-gradient(to right, #C5621B, #c5621b94);
-}
-
-.most_review__item:nth-of-type(4n - 2) .most_review__item__down > div::after {
-    background-image: linear-gradient(to right, #1BC588, #1bc58781);
-}
-
-.most_review__item:nth-of-type(4n - 1) .most_review__item__down > div::after {
-    background-image: linear-gradient(to right, #C2C51B, #c2c51b99);
-}
-
-.most_review__item__down > span {
-    font-weight: 400;
-    margin-bottom: 6px;
+    border-radius: 50%;
 }
