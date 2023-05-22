@@ -1,0 +1,494 @@
+/*background*/
+
+.background {
+    width: 1920px;
+    height: 4038px;
+    left: 0px;
+    position: absolute;
+    background: linear-gradient(180deg, #000428 0%, #004E92 100%);
+}
+
+@font-face {
+    font-family: 'Alatsi';
+    src: url(font/Alatsi-Regular/Alatsi-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Be-Vietnam';
+    src: url(font/Be_Vietnam_Pro/BeVietnamPro-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Be-Vietnam-light';
+    src: url(font/Be_Vietnam_Pro/BeVietnamPro-Light\.ttf);
+}
+
+
+
+.product-logo {
+    position: absolute;
+    left: 8.18%;
+    right: 77.92%;
+    top: 10.93%;
+    bottom: 81.78%;
+
+    background: url(image/product-logo.png);
+    background-repeat: no-repeat;
+}
+
+.product-image {
+    position: absolute;
+    width: 808px;
+    height: 976px;
+    left: 533px;
+    top: 170px;
+
+    background: url(image/product-image.png);
+    background-repeat: no-repeat;
+}
+
+.product-name {
+    position: absolute;
+    left: 69.01%;
+    right: -3.49%;
+    top: 10.93%;
+    bottom: 87.25%;
+
+    font-family: 'Alatsi';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 122.9%;
+
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.detail-button {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 12.3603px;
+    gap: 12.36px;
+
+    position: absolute;
+    width: 151px;
+    height: 97px;
+    left: 1361px;
+    top: 589px;
+
+    background: #2473AF;
+    border-radius: 19.7764px;
+}
+
+.group-detail-icon {
+    position: absolute;
+    width: 73px;
+    height: 84px;
+    left: 1400px;
+    top: 594px;
+}
+
+.detail-button-store-icon {
+    position: absolute;
+    width: 51px;
+    height: 51px;
+    left: 1407px;
+    top: 594px;
+}
+
+.detail-button-icon {
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    top: 16.67%;
+    bottom: 16.67%;
+    
+    border: 2px solid #FFFFFF;
+}
+
+.fa-solid, .fa-chart-simple {
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    top: 16.67%;
+    bottom: 16.67%;
+    
+    border: 2px solid #FFFFFF;
+}
+
+.span:detail {
+    position: absolute;
+    width: 73px;
+    height: 33px;
+    left: 1400px;
+    top: 645px;
+
+    font-family: 'Be-Vietnam';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 32px;
+}
+
+.compare-button {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 12.3603px;
+    gap: 12.36px;
+
+    position: absolute;
+    width: 151px;
+    height: 97px;
+    left: 1603px;
+    top: 588px;
+
+    background: #2473AF;
+    border-radius: 19.7764px;
+}
+
+
+/*switch*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+  
+  /* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+  /* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #2196F3;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+  
+  /* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+/*switch*/
+
+
+.product-description-box {
+    position: absolute;
+    width: 1784px;
+    height: 251px;
+    left: 73px;
+    top: 955px;
+    
+    background: rgba(0, 0, 0, 0.41);
+    backdrop-filter: blur(15px);
+    /* Note: backdrop-filter has minimal browser support */
+    
+    border-radius: 20px;
+}
+
+.product-description {
+    position: absolute;
+    width: 1800px;
+    height: 102px;
+    left: 70px;
+    top: 1020px;
+
+    font-family: 'Be-Vietnam-light';
+    font-style: normal;
+    font-weight: 0;
+    font-size: 40px;
+    line-height: 128.1%;
+    /* or 51px */
+
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+
+/****************************************************************************************************************/
+/*detail-frame*/
+
+.detail-frame {
+    position: relative;
+    width: 1920px;
+    height: 967px;
+    top: 1065px;
+}
+
+.detail-title {
+    position: absolute;
+    width: 379.1px;
+    height: 112.42px;
+    left: 47.68px;
+    top: 205.82px;
+
+    font-family: 'Be-Vietnam';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 96px;
+    line-height: 154px;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+
+.detail-title-underline {
+    width: 302px;
+    height: 10px;
+    left: 48px;
+    top: 340px;
+    
+    background-color: #FFFFFF;
+    position: absolute;
+}
+
+.specification {
+    position: absolute;
+    width: 260px;
+    height: 50px;
+    left: 47.68px;
+    top: 390px;
+
+    font-family: 'Be-Vietnam';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 58px;
+
+    color: #7FC6E5;
+}
+
+.specification-table {
+    position: absolute;
+    width: 1010px;
+    height: 550px;
+    left: 47.68px;
+    top: 465px;
+    background-color: red;
+}
+
+#resp-table {
+    width: 100%;
+    height: 100%;
+    display: table;
+    background-color: pink;
+}
+
+/* #resp-table-body{
+    display: table-column-group;
+} */
+
+.resp-table-column{
+    display: table-column
+}
+
+.table-body-cell{
+    display: table-cell;
+}
+
+.seperating-line {
+    position: absolute;
+    width: 552px;
+    height: 5px;
+    left: 780px;
+    top: 740px;
+
+    background-color: #FFFFFF;
+    transform: rotate(90deg);
+}
+
+.retailer {
+    position: absolute;
+    width: 238.23px;
+    height: 48px;
+    left: 1085px;
+    top: 390px;
+
+    font-family: 'Be-Vietnam';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 58px;
+
+    color: #7FC6E5;
+
+}
+
+.logo-fit {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.retailer-logo-1 {
+    position: absolute;
+    width: 124px;
+    height: 97px;
+    left: 1110px;
+    top: 482px;
+}
+
+.CellphoneS {
+    position: absolute;
+    width: 180px;
+    height: 50px;
+    left: 1085px;
+    top: 605px;
+
+    font-family: 'Be-Vietnam';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 47px;
+
+    color: #FFFFFF;
+}
+
+.retailer-logo-2 {
+    position: absolute;
+    width: 195.85px;
+    height: 152.89px;
+    left: 1362.5px;
+    top: 450.77px;
+}
+
+.FPT-shop {
+    position: absolute;
+    width: 180px;
+    height: 50px;
+    left: 1390px;
+    top: 605px;
+
+    font-family: 'Be-Vietnam';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 47px;
+
+    color: #FFFFFF;
+}
+
+.retailer-logo-3 {
+    position: absolute;
+    width: 225.63px;
+    height: 175.48px;
+    left: 1615.61px;
+    top: 439.8px;
+}
+
+.Mega-Technology {
+    position: absolute;
+    width: 242.81px;
+    height: 82.26px;
+    left: 1620.19px;
+    top: 589.69px;
+
+    font-family: 'Be-Vietnam';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 47px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.retailer-logo-4 {
+    position: absolute;
+    width: 278.31px;
+    height: 217.31px;
+    left: 1092.2px;
+    top: 687.31px;
+}
+
+.Phi-Long-technology {
+    position: absolute;
+    width: 279.46px;
+    height: 57.58px;
+    left: 1072.73px;
+    top: 862.05px;
+
+    font-family: 'Be-Vietnam';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 47px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.retailer-logo-5 {
+    position: absolute;
+    width: 276.02px;
+    height: 215.69px;
+    left: 1565.22px;
+    top: 689.31px;
+}
+
+.GEARVN {
+    position: absolute;
+    width: 242.81px;
+    height: 70.37px;
+    left: 1650px;
+    top: 871.19px;
+
+    font-family: 'Be-Vietnam';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 47px;
+
+    color: #FFFFFF;
+}
+
+
+
