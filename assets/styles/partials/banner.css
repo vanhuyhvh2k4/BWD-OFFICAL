@@ -17,7 +17,6 @@
     -moz-background-clip: text;
     background-clip: text;
     color: transparent;
-    animation: text_transform 10s linear infinite;
 }
 
 #main_img {
@@ -30,19 +29,4 @@
     height: 100%;
     flex-shrink: 0;
     object-fit: contain;
-}
-
-@keyframes text_transform {
-    0% {
-        background-image: linear-gradient(to right, #69EACB, #EACCF8, #6654F1);
-
-    }
-    50% {
-        background-image: linear-gradient(to right, #7c69ea, #e0f8cc, #f1545f);
-
-    }
-    100% {
-        background-image: linear-gradient(to right, #ddea69, #f8cccc, #54f188);
-
-    }
 }
