@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/styles/global.css">
+    <link rel="stylesheet" href="./assets/styles/partials/poppup_compare.css">
+    <link rel="stylesheet" href="./assets/styles/partials/header.css">
+    <link rel="stylesheet" href="./assets/styles/pages/detail.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="app">
+        <div id="home"></div>
+        <div class="poppup_compare_modal" hidden>
+            <div class="poppup_compare_overlay"></div>
+            <div class="poppup_compare_form">
+                <div class="btn_close">
+                    <img class="close" src="./assets/images/close.png" alt="">
+                </div>
+                <div>
+                    <section class="poppup_compare_form__item root">
+                        <!-- <div  class="poppup_compare_form__item__img">
+                            <img src="./assets/images/${laptoplist[index].imgUrl}.png" alt="">
+                        </div>
+                        <article class="poppup_compare_form__item__text">
+                            <div>
+                                <span>Company: </span>
+                                <span>${laptoplist[index].company}</span>
+                            </div>
+                            <div>
+                                <span>Name: </span>
+                                <span>${laptoplist[index].name}</span>
+                            </div>
+                            <div>
+                                <span>Price: </span>
+                                <span>${laptoplist[index].price}</span>
+                            </div> -->
+                    </section>
+                    <button class="compare_btn">
+                        <span>Compare</span>
+                    </button>
+                    <section class="poppup_compare_form__item dynamic">
+                        <button class="btn_select">
+                            <span>Choose a laptop</span>
+                        </button>
+                        <ul id="poppup_select" class="poppup_select" hidden>
+                            <div class="poppup_select_close">
+                                <img class="close" src="./assets/images/close2.png" alt="">
+                            </div>
+                            <li>
+                                <div class="poppup_select__item">
+                                    <img src="./assets/images/laptop1-main.png" alt="">
+                                    <span>MSI Gaming Katana</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="poppup_select__item">
+                                    <img src="./assets/images/laptop2-main.png" alt="">
+                                    <span>Lenovo Gaming Legion 5</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="poppup_select__item">
+                                    <img src="./assets/images/laptop3-main.png" alt="">
+                                    <span>MacBook Pro M2 2022</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="poppup_select__item">
+                                    <img src="./assets/images/laptop4-main.png" alt="">
+                                    <span>Lenovo ThinkPad</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="poppup_select__item">
+                                    <img src="./assets/images/laptop5-main.png" alt="">
+                                    <span>HP Gaming Victus</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="poppup_select__item">
+                                    <img src="./assets/images/laptop6-main.png" alt="">
+                                    <span>Asus Vivobook Pro</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="poppup_select__item">
+                                    <img src="./assets/images/laptop7-main.png" alt="">
+                                    <span>Lenovo IdeaPad 1</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="poppup_select__item">
+                                    <img src="./assets/images/laptop8-main.png" alt="">
+                                    <span>MSI Modern 15</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <header id="header-compare">
+            <div id="logo">
+                <img src="./assets/images/logo.png" alt="logo">
+            </div>
+            <ul id="nav-compare">
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Category</a> <i class="fa-solid fa-chevron-down"></i></li>
+            </ul>
+        </header>
+        <main id="content">
+            <article class="title">
+                <!-- <h1>Laptop CHUWI GemiBook Pro Celeron N5100/8GB/256GB/14''IPS/Win 10</h1> -->
+            </article>
+            <hr style="border-width: 2px;">
+            <div class="info">
+                <section class="info__left">
+                    <div class="info__left-image">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                              <!-- <div class="carousel-item active" data-bs-interval="5000">
+                                <img src="./assets/images/laptop1-slider1.jpg" class="d-block w-100" alt="...">
+                              </div>
+                              <div class="carousel-item" data-bs-interval="5000">
+                                <img src="./assets/images/laptop1-slider2.jpg" class="d-block w-100" alt="...">
+                              </div>
+                              <div class="carousel-item" data-bs-interval="5000">
+                                <img src="./assets/images/laptop1-slider3.jpg" class="d-block w-100" alt="...">
+                              </div> -->
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+                    </div>
+                    <div class="info__left-detail">
+                        <li>
+                            <i class="fa-regular fa-images"></i>
+                            <h3>Pictures</h3>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-youtube"></i>
+                            <h3>Reviews</h3>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-gift"></i>
+                            <h3>Unbox</h3>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-codepen"></i>
+                            <h3>360 image</h3>
+                        </li>
+                    </div>
+                    <div class="info__left-list_images row">
+                        <!-- <li class="col-3">
+                            <img src="./assets/images/laptop1-small1.jpg" alt="">
+                        </li> -->
+                    </div>
+                </section>
+                <div hidden class="subInfo__left" style="width: 50%;"></div>
+                <section class="info__right">
+                    <article class="info__right-price">
+                        <h1>Price: &ensp;</h1>
+                        <h1>$1354 - $1500</h1>
+                    </article>
+                    <article class="info__right-detail">
+                        <li>
+                            <i class="fa-solid fa-display"></i>
+                            <h3>14.0 inch, 2160 x 1440 Pixels, IPS, 60 Hz</h3>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-microchip"></i>
+                            <h3>Intel, Celeron, N5100</h3>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-memory"></i>
+                            <h3>8 GB, LPDDR4X, 2133 MHz</h3>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-hard-drive"></i>
+                            <h3>SSD 256 GB</h3>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-battery-full"></i>
+                            <h3>5000MhA</h3>
+                        </li>
+                        <li class="info__right-detail-more">
+                            <small>>>> See more detail</small>
+                        </li>
+                    </article>
+                    <div class="info_right-group_button">
+                        <button>Explore More</button>
+                        <button>Compare</button>
+                    </div>
+                    <div class="table-wrapper">
+                        <!-- <table class="table table-dark table-striped table-hover">
+                            <tr>
+                                <td>Hệ điều hành</td>
+                                <td>Windows 10 Home</td>
+                            </tr>
+                            <tr>
+                                <td>Màn hình</td>
+                                <td>14.0 inch, 2160 x 1440 Pixels, IPS, 60 Hz</td>
+                            </tr>
+                            <tr>
+                                <td>CPU</td>
+                                <td>Intel, Celeron, N5100</td>
+                            </tr>
+                            <tr>
+                                <td>RAM</td>
+                                <td>8 GB, LPDDR4X, 2133 MHz</td>
+                            </tr>
+                            <tr>
+                                <td>Ổ cứng</td>
+                                <td>SSD 256 GB</td>
+                            </tr>
+                            <tr>
+                                <td>Trọng lượng</td>
+                                <td>1.2kg</td>
+                            </tr>
+                            <tr>
+                                <td>Graphic</td>
+                                <td>GTX 3060 Ti</td>
+                            </tr>
+                            <tr>
+                                <td>Battery</td>
+                                <td>5000 MAh</td>
+                            </tr>
+                            <tr>
+                                <td>Made In</td>
+                                <td>Amrica</td>
+                            </tr>
+                        </table> -->
+                        <small class="info__right-detail-more">>>> See more details</small>
+                    </div>
+                    <div class="features">
+                        <!-- <h1>Outstanding Features</h1>
+                        <li id="features__item_1" class="features__item">
+                            <section class="features__item-img">
+                                <img src="./assets/images/intel.png" alt="">
+                            </section>
+                            <section class="features__item-text">
+                                <h2> Intel UHD Graphics for 11th Gen Intel Processors</h2>
+                                <ul class="row">
+                                   <li class="col-6">
+                                    <span>core:</span>
+                                    <span>2</span>
+                                   </li> 
+                                   <li class="col-6">
+                                    <span>core:</span>
+                                    <span>2</span>
+                                   </li> 
+                                   <li class="col-6">
+                                    <span>core:</span>
+                                    <span>2</span>
+                                   </li> 
+                                   <li class="col-6">
+                                    <span>core:</span>
+                                    <span>2</span>
+                                   </li> 
+                                   <li class="col-6">
+                                    <span>core:</span>
+                                    <span>2</span>
+                                   </li> 
+                                   <li class="col-6">
+                                    <span>core:</span>
+                                    <span>2</span>
+                                   </li> 
+                                </ul>
+                            </section>
+                        </li>
+                        <li id="features__item_2" class="features__item">
+                            <section class="features__item-img">
+                                <img src="./assets/images/gtx.png" alt="">
+                            </section>
+                            <section class="features__item-text">
+                                <h2>NVIDIA GeForce GTX 1650 4GB (mobile )</h2>
+                                <ul class="row">
+                                    <li class="col-6">
+                                     <span>core:</span>
+                                     <span>2</span>
+                                    </li> 
+                                    <li class="col-6">
+                                     <span>core:</span>
+                                     <span>2</span>
+                                    </li> 
+                                    <li class="col-6">
+                                     <span>core:</span>
+                                     <span>2</span>
+                                    </li> 
+                                    <li class="col-6">
+                                     <span>core:</span>
+                                     <span>2</span>
+                                    </li> 
+                                    <li class="col-6">
+                                     <span>core:</span>
+                                     <span>2</span>
+                                    </li> 
+                                    <li class="col-6">
+                                     <span>core:</span>
+                                     <span>2</span>
+                                    </li> 
+                                 </ul>
+                            </section>
+                        </li> -->
+                    </div>
+                </section>
+            </div>
+            <div class="comment">
+                <header class="comment__header">
+                    <h2>Rating product</h2>
+                    <hr>
+                    <div>
+                        <section class="comment__header-avg">
+                            <h3>Avg rating</h3>
+                            <h1>5/5</h1>
+                            <div>
+                                <script>
+                                    for (let index = 0; index < 5; index++) {
+                                        document.write('<i class="fa-solid fa-star"></i>')
+                                    }
+                                </script>
+                            </div>
+                            <h4>237 rating</h4>
+                        </section>
+                        <section class="comment__header-rate">
+                            <ul>
+                                <li>
+                                    <span>5</span>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span class="comment__header-rate-progress"></span>
+                                    <span>214</span>
+                                </li>
+                                <li>
+                                    <span>4</span>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span class="comment__header-rate-progress"></span>
+                                    <span>17</span>
+                                </li>
+                                <li>
+                                    <span>3</span>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span class="comment__header-rate-progress"></span>
+                                    <span>5</span>
+                                </li>
+                                <li>
+                                    <span>2</span>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span class="comment__header-rate-progress"></span>
+                                    <span>0</span>
+                                </li>
+                                <li>
+                                    <span>1</span>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span class="comment__header-rate-progress"></span>
+                                    <span>0</span>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="comment__header-btn">
+                            <span>You already used this product?</span>
+                            <button>Rating Now</button>
+                        </section>
+                    </div>
+                </header>
+                <div class="comment__content">
+                    <ul>
+                        <li class="comment__content-item">
+                            <div>
+                                <img src="https://plus.unsplash.com/premium_photo-1684783848349-fe1d51ab831b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMnx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                            </div>
+                            <article class="comment__content-item-text">
+                                <h2>Alex Xanderik</h2>
+                                <div>
+                                    <script>
+                                        for (let index = 0; index < 5; index++) {
+                                            document.write(`<i class="fa-solid fa-star"></i>`)
+                                        }
+                                    </script>
+                                </div>
+                                <p>Overall, I would say that this laptop is very good. It has impressive processing power, a high-quality display, and a sleek design. I would highly recommend it to anyone in the market for a new laptop.</p>
+                                <small>1 day ago</small>
+                            </article>
+                        </li>
+                        <li class="comment__content-item">
+                            <div>
+                                <img src="https://images.unsplash.com/photo-1685640205918-66d30caf640d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60" alt="">
+                            </div>
+                            <article class="comment__content-item-text">
+                                <h2>Dame Vike</h2>
+                                <div>
+                                    <script>
+                                        for (let index = 0; index < 5; index++) {
+                                            document.write(`<i class="fa-solid fa-star"></i>`)
+                                        }
+                                    </script>
+                                </div>
+                                <p>Sure, I'd be happy to provide more details about why I think this laptop is very good.</p>
+                                <small>3 day ago</small>
+                            </article>
+                        </li>
+                        <li class="comment__content-item">
+                            <div>
+                                <img src="https://images.unsplash.com/photo-1661956602139-ec64991b8b16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxNnx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                            </div>
+                            <article class="comment__content-item-text">
+                                <h2>Van Huy</h2>
+                                <div>
+                                    <script>
+                                        for (let index = 0; index < 5; index++) {
+                                            document.write(`<i class="fa-solid fa-star"></i>`)
+                                        }
+                                    </script>
+                                </div>
+                                <p>Certainly! Here are some additional features and benefits of this laptop that make it a great choice</p>
+                                <small>4 day ago</small>
+                            </article>
+                        </li>
+                    </ul>
+                    <div class="comment__content-pagination">
+                        <script>
+                            for (let index = 1; index <= 5; index++) {
+                                document.write(`<li ${index === 1 ? `class="active"` : ''}>${index}</li>`)
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="container-fluid g-0 my-5">
+
+            <footer class="bg-primary text-center text-lg-start text-white">
+                <!-- Grid container -->
+                <div class="container p-4">
+                    <!--Grid row-->
+                    <div class="row my-4">
+                        <!--Grid column-->
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+
+                            <div class="rounded-circle bg-white shadow-1-strong d-flex align-items-center justify-content-center mb-4 mx-auto"
+                                style="width: 150px; height: 150px;">
+                                <img src="https://mdbootstrap.com/img/Photos/new-templates/animal-shelter/logo.png"
+                                    height="70" alt="" loading="lazy" />
+                            </div>
+
+                            <p class="text-center">Assist You In Making The Best Decision
+                                </p>
+
+                            <ul class="list-unstyled d-flex flex-row justify-content-center">
+                                <li>
+                                    <a class="text-white px-2" href="#!">
+                                        <i class="fab fa-facebook-square"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="text-white px-2" href="#!">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="text-white ps-2" href="#!">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                            <h5 class="text-uppercase mb-4">Members</h5>
+
+                            <ul class="list-unstyled">
+                                <li class="mb-4">
+                                    <a href="#!" class="text-white"><i class="fas fa-paw pe-3"></i>Ho Van Huy - 22IT112</a>
+                                </li>
+                                <li class="mb-4">
+                                    <a href="#!" class="text-white"><i class="fas fa-paw pe-3"></i>Vo Hong Duc - 22IT070</a>
+                                </li>
+                                <li class="mb-4">
+                                    <a href="#!" class="text-white"><i class="fas fa-paw pe-3"></i>Hoang Cong Tri Dung - 22IT048</a>
+                                </li>
+                                <li class="mb-4">
+                                    <a href="#!" class="text-white"><i class="fas fa-paw pe-3"></i>Nguyen Thanh Binh - 22IT027</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                            <h5 class="text-uppercase mb-4">Features</h5>
+
+                            <ul class="list-unstyled">
+                                <li class="mb-4">
+                                    <a href="#!" class="text-white"><i class="fas fa-paw pe-3"></i>Home page</a>
+                                </li>
+                                <li class="mb-4">
+                                    <a href="#!" class="text-white"><i class="fas fa-paw pe-3"></i>Compare page</a>
+                                </li>
+                                <li class="mb-4">
+                                    <a href="#!" class="text-white"><i class="fas fa-paw pe-3"></i>Details page</a>
+                                </li>
+                                <li class="mb-4">
+                                    <a href="#!" class="text-white"><i class="fas fa-paw pe-3"></i>Github</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                            <h5 class="text-uppercase mb-4">Contact</h5>
+
+                            <ul class="list-unstyled">
+                                <li>
+                                    <p><i class="fas fa-map-marker-alt pe-2"></i>Warsaw, 57 Street, Poland</p>
+                                </li>
+                                <li>
+                                    <p><i class="fas fa-phone pe-2"></i>+ 01 234 567 89</p>
+                                </li>
+                                <li>
+                                    <p><i class="fas fa-envelope pe-2 mb-0"></i>contact@example.com</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                </div>
+                <!-- Grid container -->
+
+                <!-- Copyright -->
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                    © 2023 Copyright:
+                    <a class="text-white" href="#">Best Web Design 2023</a>
+                </div>
+                <!-- Copyright -->
+            </footer>
+            <a href="#home" id="navigation">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+        </div>
+    </div>
+    <script type="module" src="./assets/js/detail.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+
+</html>

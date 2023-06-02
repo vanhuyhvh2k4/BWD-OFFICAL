@@ -40,7 +40,7 @@
 .poppup_compare_form {
     width: 80%;
     height: 80%;
-    background-color: var(--primary-color);
+    background-color: #fff;
     z-index: 1;
     border-radius: 12px;
     box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.1);
@@ -54,27 +54,6 @@
     align-items: center;
 }
 
-.poppup_compare_form > button {
-    border: 1px solid #ccc;
-    padding: 8px;
-    margin-top: 24px;
-    outline: none;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    background-color: rgb(255, 62, 62);
-    color: var(--light-color);
-    box-shadow: 0px 5px 0px rgb(255, 30, 30);
-    height: 50px;
-    border-radius: 8px;
-    user-select: none;
-    transition: .1s;
-}
-
-.poppup_compare_form > button:active {
-    transform: translateX(-50%) translateY(5px);
-    box-shadow: unset;
-}
-
 .poppup_compare_form__icon {
     width: 100px;
     height: 100px;
@@ -85,19 +64,25 @@
 .poppup_compare_form__item {
     width: 400px;
     height: 400px;
-    background-image: linear-gradient(to bottom, #012658 60%, #010710);
+    /* background-image: linear-gradient(to bottom, #012658 60%, #010710); */
+    background-color: rgba(38, 50, 56, 1);
     border-radius: 12px;
     border: 1px solid #eee;
     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
     display: grid;
     place-items: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .poppup_compare_form__item__img {
     width: 100%;
     height: 250px;
-    background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0.2));
+    background-color: rgba(15, 137, 250, 1);
     border-bottom: 1px solid #ccc;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .poppup_compare_form__item__img > img {
@@ -108,6 +93,7 @@
 }
 
 .poppup_compare_form__item__text {
+    margin-top: 250px;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -205,4 +191,18 @@
 .btn_change:active {
     box-shadow: unset;
     transform: translate(-50%, 5px);
+}
+
+.compare_btn {
+    background-color: var(--light-color);
+    border: 1px solid var(--primary-color);
+    outline: none;
+    padding: 12px 24px;
+    border-radius: 100px;
+    color: var(--primary-color);
+}
+
+.compare_btn:hover {
+    background-color: var(--primary-color);
+    color: var(--light-color);
 }

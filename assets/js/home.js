@@ -1,10 +1,10 @@
-import laptoplist from "./data.js";
+import data from "./data.js";
+
 document.addEventListener("DOMContentLoaded", () => {
-    
+
     var mostSearchedList = document.querySelector('.most_searched__list');
     var btnSeeMore = document.querySelector('.btn_see_more');
     var btnSeeLess = document.querySelector('.btn_see_less');
-    const arr = laptoplist.sort((a, b) => b.score - a.score);
 
     btnSeeMore.addEventListener('click', () => {
         mostSearchedList.classList.add('see_full');
@@ -17,30 +17,28 @@ document.addEventListener("DOMContentLoaded", () => {
         btnSeeLess.setAttribute('hidden', true);
         btnSeeMore.removeAttribute('hidden', true);
     })
-    
+
     //render most searched items
-    mostSearchedList.innerHTML = arr.slice(0, 6).map((item, index) => {
+    mostSearchedList.innerHTML = data.slice(0, 6).map((item, index) => {
         return `<div class="col-lg-4">
         <li class="most_searched__item">
             <div class="most_searched__item__up">
                 <div class="most_searched__item__up__info">
                     <section>
-                        <img src="./assets/images/${item.imgUrl}.png" alt="">
+                        <img src="./assets/images/${item.info.image.main}.png" alt="">
                     </section>
                     <section>
                         <figure>
                             <div>
-                                <label for="">Performance</label>
+                                <label for="">CPU</label>
                                 <p>
-                                    <span>${item.rating_performance}</span>
-                                    <i class="fa-solid fa-star"></i>
+                                    <span>${item.chip.name}</span>
                                 </p>
                             </div>
                             <div>
                                 <label for="">Battery</label>
                                 <p>
-                                    <span>${item.rating_battery}</span>
-                                    <i class="fa-solid fa-star"></i>
+                                    <span>${item.battery.capacity} Mah</span>
                                 </p>
                             </div>
                         </figure>
@@ -48,15 +46,13 @@ document.addEventListener("DOMContentLoaded", () => {
                             <div>
                                 <label for="">Price</label>
                                 <p>
-                                    <span>${item.rating_price}</span>
-                                    <i class="fa-solid fa-star"></i>
+                                    <span>$${(item.store_price.sort((a, b) => a.price - b.price))[0].price} ~ $${(item.store_price.sort((a, b) => a.price - b.price))[item.store_price.length - 1].price}</span>
                                 </p>
                             </div>
                             <div>
                                 <label for="">Rating</label>
                                 <p>
-                                    <span>${item.rating}</span>
-                                    <i class="fa-solid fa-star"></i>
+                                    <span>${item.rating.num_of_rating}</span>
                                 </p>
                             </div>
                         </figure>
@@ -65,36 +61,36 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
                 <h1>
                     ${index <= 2 ? `<img src="./assets/images/${(index === 0 && `gold`) || (index === 1 && 'silver') || (index === 2 && `bronze`)}-medal.png" alt=""></img>` : ''}
-                    ${item.name}
+                    ${item.info.name}
                 </h1>
                 <div class="most_searched__item__up__overlay">
                 <section>
                         <span>Company: </span>
-                        <span>${item.company}</span>
+                        <span>${item.info.company}</span>
                     </section>
                     <section>
                         <span>Name: </span>
-                        <span>${item.name}</span>
+                        <span>${item.info.name}</span>
                     </section>
                     <section>
                         <span>Screen: </span>
-                        <span>${item.resolution} px</span>
+                        <span>${item.screen.resolution} px</span>
                     </section>
                     <section>
                         <span>Chip: </span>
-                        <span>${item.chip}</span>
+                        <span>${item.chip.name}</span>
                     </section>
                     <section>
                         <span>Graphic Card: </span>
-                        <span>${item.graphic}</span>
+                        <span>${item.graphic.name}</span>
                     </section>
                     <section>
                         <span>Hard Disk: </span>
-                        <span>${item.disk} Gb</span>
+                        <span>${item.disk.capacity} Gb</span>
                     </section>
                     <section>
                         <span>RAM: </span>
-                        <span>${item.ram} Gb</span>
+                        <span>${item.ram.capacity} Gb</span>
                     </section>
                     <section>
                         <span>Fan: </span>
@@ -102,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     </section>
                     <section>
                         <span>Battery: </span>
-                        <span>${item.battery} mAh</span>
+                        <span>${item.battery.capacity} mAh</span>
                     </section>
                     <section>
                         <span>Price: </span>
@@ -119,6 +115,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     var mostSearchItems = document.querySelectorAll('.most_searched__item__up__info');
     var mostSearchItemsOverlay = document.querySelectorAll('.most_searched__item__up__overlay');
+    var btnDetails = document.querySelectorAll('.most_searched__item__down');
+
+    btnDetails.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            sessionStorage.setItem('root', index);
+            window.location.assign('../detail.html');
+        })
+    })
 
     mostSearchItems.forEach((item, index) => {
         item.addEventListener('click', () => {

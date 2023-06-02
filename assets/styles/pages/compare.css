@@ -15,17 +15,12 @@
 .card_item {
     width: 400px;
     height: 400px;
-    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.05));
     border-radius: 12px;
+    background-color: var(--light-color);
     box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgb(255, 142, 142);
     padding: 8px;
     overflow: hidden;
     position: relative;
-}
-
-.card_item:last-child {
-    border: 1px solid var(--primary-color);
 }
 
 .card_item::after {
@@ -59,13 +54,8 @@
 .card_item__img {
     width: 100%;
     height: 70%;
-    border: 1px solid rgb(255, 130, 130);
     border-radius: 8px;
     position: relative;
-}
-
-.card_item:last-child > .card_item__img {
-    border: 1px solid var(--primary-color);
 }
 
 .card_item:first-child > .card_item__img {
@@ -102,6 +92,11 @@
     align-items: flex-start;
     gap: 12px;
     margin-top: 6px;
+    color: var(--dark-color);
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .card_item__text__group > img {
@@ -133,6 +128,37 @@
 
 .recommend > .recommend__chart > div{
     overflow: visible;
+}
+
+.recommend__chart__note {
+    text-align: start;
+}
+
+.recommend__chart__note-item {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.recommend__chart__note-item > span:first-child {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+}
+
+.recommend__chart__note-item > span:last-child {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.recommend__chart__note-item:first-child > span:first-child {
+    background-color: rgb(218, 97, 100);
+}
+
+.recommend__chart__note-item:last-child > span:first-child {
+    background-color: #6c82fc;
 }
 
 .recommend__chart__btns {

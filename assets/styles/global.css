@@ -78,7 +78,7 @@ body {
 
 .app {
     width: 100%;
-    height: fit-content;
+    /* height: 100%; */
     background-image: linear-gradient(to bottom, #00062A, #0065dd);
     background-repeat: no-repeat;
 }

@@ -1,37 +1,42 @@
 #search {
-    width: 35%;
-    height: 50px;
+    width: 10%;
+    height: 60px;
     background-image: linear-gradient(to right, #69EACB, #EACCF8, #6654F1);
-    border-radius: 6px;
+    border-radius: 50px;
     display: grid;
     place-items: center ;
     margin: auto;
-    position: relative;
+    position: absolute !important;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #search .wrapper {
-    width: calc(100% - 6px);
-    height: calc(100% - 6px);
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    padding: 8px;
+    /* width: calc(100% - 6px);
+    height: calc(100% - 6px);  */
+    background-color: rgba(255, 255, 255, 0.7); 
+    background: none;
+    border-radius: 50px;
+    float:left ;
+    align-items: center; 
+    /* padding: 8px; */
+    transition: .3s;
 }
 
 #search .wrapper > i {
     color: var(--primary-color);
 }
 
-#search .wrapper > input {
+#search .wrapper > input::placeholder {
     color: var(--primary-color);
-    flex: 1;
-    border: none;
-    outline: none;
-    background-color: transparent;
-    padding-left: 12px;
 }
-
+.search-btn{
+    background-color: transparent;
+    border: 0;
+    color: white;
+    font-size: 4rem;
+}
 .search_poppup {
     position: absolute;   
     padding: 12px;
@@ -75,3 +80,56 @@
     color: var(--dark-color);
     margin-left: 12px;
 }
+#search:focus,
+#search:not(:placeholder-shown) {
+    width: 8%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: absolute;
+    transition: .4s;
+}
+#search.wrapper > input{
+    display: none;
+}
+
+#search:hover .wrapper > input {
+  font-size: larger;
+  color: var(--primary-color);
+  flex: 1;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  display: block;
+}
+
+
+#search:hover > .search-btn,
+#search:focus + .search-btn,
+#search:not(:placeholder-shown) + .search-btn
+{
+  color:var(--primary-color) ;
+  background-color: transparent;
+  font-size: 3.5rem;
+  padding: 4%;
+  transition: .3s;
+  /* color: black; */
+  
+ 
+}
+#search .wrapper > input {
+    display: none;
+}
+
+#search:hover {
+  width: 30%;
+  display: flex;
+  justify-content: start;
+  transition: .3s;
+}
+
+
+
+

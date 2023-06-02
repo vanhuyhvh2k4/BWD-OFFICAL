@@ -34,10 +34,11 @@
                     <section class="poppup_compare_form__item root">
 
                     </section>
-                    <img class="poppup_compare_form__icon" src="./assets/images/vs.png" alt="">
+                    <button class="compare_btn">
+                        <span>Compare</span>
+                    </button>
                     <section class="poppup_compare_form__item dynamic">
                         <button class="btn_select">
-                            <img class="laptop_screen" src="./assets/images/laptop-screen.png" alt="">
                             <span>Choose a laptop</span>
                         </button>
                         <ul id="poppup_select" class="poppup_select" hidden>
@@ -46,62 +47,58 @@
                             </div>
                             <li>
                                 <div class="poppup_select__item">
-                                    <img src="./assets/images/laptop1.png" alt="">
-                                    <span>Macbook Pro</span>
+                                    <img src="./assets/images/laptop1-main.png" alt="">
+                                    <span>MSI Gaming Katana</span>
                                 </div>
                             </li>
                             <li>
                                 <div class="poppup_select__item">
-                                    <img src="./assets/images/laptop2.png" alt="">
-                                    <span>Macbook Pro</span>
+                                    <img src="./assets/images/laptop2-main.png" alt="">
+                                    <span>Lenovo Gaming Legion 5</span>
                                 </div>
                             </li>
                             <li>
                                 <div class="poppup_select__item">
-                                    <img src="./assets/images/laptop3.png" alt="">
-                                    <span>Macbook Pro</span>
+                                    <img src="./assets/images/laptop3-main.png" alt="">
+                                    <span>MacBook Pro M2 2022</span>
                                 </div>
                             </li>
                             <li>
                                 <div class="poppup_select__item">
-                                    <img src="./assets/images/laptop4.png" alt="">
-                                    <span>Macbook Pro</span>
+                                    <img src="./assets/images/laptop4-main.png" alt="">
+                                    <span>Lenovo ThinkPad</span>
                                 </div>
                             </li>
                             <li>
                                 <div class="poppup_select__item">
-                                    <img src="./assets/images/laptop5.png" alt="">
-                                    <span>Macbook Pro</span>
+                                    <img src="./assets/images/laptop5-main.png" alt="">
+                                    <span>HP Gaming Victus</span>
                                 </div>
                             </li>
                             <li>
                                 <div class="poppup_select__item">
-                                    <img src="./assets/images/laptop6.png" alt="">
-                                    <span>Macbook Pro</span>
+                                    <img src="./assets/images/laptop6-main.png" alt="">
+                                    <span>Asus Vivobook Pro</span>
                                 </div>
                             </li>
                             <li>
                                 <div class="poppup_select__item">
-                                    <img src="./assets/images/laptop7.png" alt="">
-                                    <span>Macbook Pro</span>
+                                    <img src="./assets/images/laptop7-main.png" alt="">
+                                    <span>Lenovo IdeaPad 1</span>
                                 </div>
                             </li>
                             <li>
                                 <div class="poppup_select__item">
-                                    <img src="./assets/images/laptop8.png" alt="">
-                                    <span>Macbook Pro</span>
+                                    <img src="./assets/images/laptop8-main.png" alt="">
+                                    <span>MSI Modern 15</span>
                                 </div>
                             </li>
                         </ul>
                     </section>
                 </div>
-                <button class="compare_btn">
-                    <img class="compare" src="./assets/images/compare_btn.png" alt="">
-                    <span>Compare</span>
-                </button>
             </div>
         </div>
-        <header id="header">
+        <!-- <header id="header">
             <div id="logo">
                 <img src="./assets/images/logo.png" alt="logo">
             </div>
@@ -153,7 +150,67 @@
                     <span>Macbook Pro</span>
                 </li>
             </div>
-        </div>
+        </div> -->
+        <header id="header">
+            <nav class="nav">
+                <div id="logo">
+                    <img src="./assets/images/logo.png" alt="logo">
+                </div>
+                <ul id="list">
+                    <li>Home</li>
+                    <li>Products</li>
+                    <li>About Us</li>
+                    <li>Category <i class="fa-solid fa-chevron-down"></i></li>
+                </ul>
+            </nav>
+            <div class="banner">
+                <img src="./assets//images/thumbnail.png" alt="">
+                <article>
+                    <h1>Assist You In <br>&ensp; Making The</h1>
+                    <h1>&ensp;&ensp;&nbsp;Best Decision</h1>
+                </article>
+            </div>
+            <div id="search" class="shadow-lg">
+                <a class="search-btn">
+                  <i class="fa fa-search"></i>
+                </a>
+                <div class="wrapper">
+                  <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+                  <input
+                    class="search_input"
+                    type="text"
+                    placeholder="Search laptops..."
+                  />
+                </div>
+                <div class="search_poppup">
+                  <b style="color: var(--dark-color)">Search history</b>
+                  <li class="search_poppup__item">
+                    <img src="./assets/images/laptop.png" alt="" />
+                    <span>Macbook Pro</span>
+                  </li>
+                  <li class="search_poppup__item">
+                    <img src="./assets/images/laptop1.png" alt="" />
+                    <span>Macbook Pro</span>
+                  </li>
+                  <li class="search_poppup__item">
+                    <img src="./assets/images/laptop2.png" alt="" />
+                    <span>Macbook Pro</span>
+                  </li>
+                  <li class="search_poppup__item">
+                    <img src="./assets/images/laptop3.png" alt="" />
+                    <span>Macbook Pro</span>
+                  </li>
+                  <li class="search_poppup__item">
+                    <img src="./assets/images/laptop4.png" alt="" />
+                    <span>Macbook Pro</span>
+                  </li>
+                  <li class="search_poppup__item">
+                    <img src="./assets/images/laptop5.png" alt="" />
+                    <span>Macbook Pro</span>
+                  </li>
+                </div>
+            </div>
+        </header>
         <main id="content">
             <section id="most_searched">
                 <h1 class="most_searched__title">
@@ -257,14 +314,8 @@
                         </li>
                     </div> -->
                 </ul>
-                <button class="btn_see_more" title="See More">
-                    <img class="see_more" src="./assets/images/see-more.png" alt="">
-                    <span>See More</span>
-                </button>
-                <button class="btn_see_less" title="See Less" hidden>
-                    <img class="see_more" src="./assets/images/minus.png" alt="">
-                    <span>See Less</span>
-                </button>
+                <span class="btn_see_more">>>> See More</span>
+                <span class="btn_see_less" hidden>>>> See Less</span>
             </section>
             <section id="most_review">
                 <div class="most_review__title">
