@@ -1,5 +1,6 @@
 const laptoplist = [
     {
+        id: 1,
         score: 10,
         company: 'Apple',
         logo: 'apple',
@@ -63,6 +64,7 @@ const laptoplist = [
         ]
     },
     {
+        id: 2,
         score: 9,
         company: 'Acer',
         logo: 'dragon',
@@ -126,6 +128,7 @@ const laptoplist = [
         ]
     },
     {
+        id: 3,
         score: 8,
         company: 'Apple',
         logo: 'apple',
@@ -189,6 +192,7 @@ const laptoplist = [
         ]
     },
     {
+        id: 4,
         score: 7,
         company: 'Apple',
         logo: 'apple',
@@ -252,6 +256,7 @@ const laptoplist = [
         ]
     },
     {
+        id: 5,
         score: 6,
         company: 'Apple',
         logo: 'apple',
@@ -315,6 +320,7 @@ const laptoplist = [
         ]
     },
     {
+        id: 6,
         score: 5,
         company: 'Apple',
         logo: 'apple',
@@ -378,6 +384,7 @@ const laptoplist = [
         ]
     },
     {
+        id: 7,
         score: 4,
         company: 'Apple',
         logo: 'apple',
@@ -441,6 +448,7 @@ const laptoplist = [
         ]
     },
     {
+        id: 8,
         score: 3,
         company: 'Apple',
         logo: 'apple',

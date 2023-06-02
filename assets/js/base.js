@@ -7,41 +7,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
         mostReviewList.innerHTML = arr.map((item, index) => {
             return `<li class="col-lg-3 most_review__item">
-                        <div class="most_review__item_inner">
-                            <section class="most_review__item__img">
-                                <img src="./assets/images/${item.imgUrl}.png" alt="">
-                                <img class="most_review__item_inner__logo" src="./assets/images/${item.logo}.png" alt="">
-                                ${index <=2 ? `<img class="most_review__item_inner__medal" src="./assets/images/${(index === 0 && `gold`) || (index === 1 && `silver`) || (index === 2 && `bronze`)}-medal.png" alt="">`: ``}
-                            </section>
-                            <article class="most_review__item__text">
-                                <section>
-                                    <img src="./assets/images/name.png" alt="">
-                                    <span>Name: </span>
-                                    <span>${item.name}</span>
-                                </section>
-                                <section>
-                                    <img src="./assets/images/price-tag.png" alt="">
-                                    <span>Price: </span>
-                                    <span>$${(item.store_price.sort((a, b) => a.price - b.price))[0].price} ~ $${(item.store_price.sort((a, b) => a.price - b.price))[item.store_price.length - 1].price}</span>
-                                </section>
-                                <section>
-                                    <img src="./assets/images/rating.png" alt="">
-                                    <span>Rating: </span>
-                                    <span>${item.num_of_rating}</span>
-                                </section>
-                            </article>
-                            <div class="most_review__item__btn">
-                                <button>
-                                    <img src="./assets/images/details.png" alt="">
-                                    <span>Details</span>
-                                </button>
-                                <button class="most_review__item__up_btn">
-                                    <img src="./assets/images/compare_btn.png" alt="">
-                                    <span>Compare</span>
-                                </button>
-                            </div>
+            <div class="most_review__item_inner">
+                <section class="most_review__item__img">
+                    <img src="./assets/images/${item.imgUrl}.png" alt="">
+                    <div class="most_review__item_inner__tag">#${index + 1}</div>
+                </section>
+                <article class="most_review__item__text">
+                    <section>
+                        <h1>${item.name}</h1>
+                    </section>
+                    <section>
+                        <div>
+                            <span>Price: </span>
+                            <span>$${(item.store_price.sort((a, b) => a.price - b.price))[0].price} ~ $${(item.store_price.sort((a, b) => a.price - b.price))[item.store_price.length - 1].price}</span>
                         </div>
-                    </li>`
+                        <div>
+                            <span>Rating: </span>
+                            <span>${item.num_of_rating}</span>
+                        </div>
+                    </section>
+                </article>
+                <div class="most_review__item__btn">
+                    <button>
+                        Details
+                    </button>
+                    <button class="most_review__item__up_btn">
+                        Compare
+                    </button>
+                </div>
+            </div>
+        </li>`
         }).join('');
 
         var searchInput = document.querySelector('.search_input');
@@ -81,17 +76,14 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <article class="poppup_compare_form__item__text">
                 <div>
-                    <img src="./assets/images/company.png" alt="">
                     <span>Company: </span>
                     <span>${laptoplist[index].company}</span>
                 </div>
                 <div>
-                    <img src="./assets/images/name.png" alt="">
                     <span>Name: </span>
                     <span>${laptoplist[index].name}</span>
                 </div>
                 <div>
-                    <img src="./assets/images/price-tag.png" alt="">
                     <span>Price: </span>
                     <span>${laptoplist[index].price}</span>
                 </div>`;
@@ -122,17 +114,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <article class="poppup_compare_form__item__text">
                     <div>
-                        <img src="./assets/images/company.png" alt="">
                         <span>Company: </span>
                         <span>${laptoplist[index].company}</span>
                     </div>
                     <div>
-                        <img src="./assets/images/name.png" alt="">
                         <span>Name: </span>
                         <span>${laptoplist[index].name}</span>
                     </div>
                     <div>
-                        <img src="./assets/images/price-tag.png" alt="">
                         <span>Price: </span>
                         <span>${laptoplist[index].price}</span>
                     </div>

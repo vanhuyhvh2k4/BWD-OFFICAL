@@ -86,7 +86,7 @@
     align-items: center;
     margin: auto;
     position: relative;
-    transition: .4s;
+    transition: .3s;
 }
 #search.wrapper > input{
     display: none;

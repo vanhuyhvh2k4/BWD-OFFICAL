@@ -1,12 +1,14 @@
-#footer {
+/* footer {
     width: 100%;
     height: 300px;
     border: 1px solid var(--primary-color);
     padding: 20px;
     display: flex;
     justify-content: space-between;
+} */
+.footer{
+    font-size: medium;
 }
-
 .logo {
     width: 100px;
     height:100px;
@@ -62,4 +64,8 @@
 
 .social a i {
     font-size: 2rem;
+}
+.text-center{
+    font-size: large;
+    line-height: 3rem;
 }

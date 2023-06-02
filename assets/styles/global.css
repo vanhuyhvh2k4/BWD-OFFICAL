@@ -2,7 +2,7 @@
     --font-family: Poppins;
     --light-color: white;
     --dark-color: black;
-    --primary-color: #008ECC;
+    --primary-color: #1347ae;
     --text-muted: #B6B7BC;
 }
 
@@ -80,11 +80,12 @@ body {
     background-size: cover;
     position: relative;
     height: 1000px;
+    width: 100%;
 }
 .app {
     width: 100%;
     height: fit-content;
-    background: linear-gradient(180deg, #000428 0%, #004E92 100%);
+    background: var(--primary-color);
     background-repeat: no-repeat;
 }
 
